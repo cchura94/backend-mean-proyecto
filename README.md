@@ -3,7 +3,18 @@
 ```
 npm install
 ```
-
+## Levantar el servidor en (DESARROLLO)
+```
+npm run dev
+```
+## Empaquetar el Codigo (BUILD)
+```
+npm run build
+```
+## Levantar el servidor en (SERVIDOR)
+```
+npm start
+```
 
 
 # Comandos de GIT
