@@ -1,0 +1,5 @@
+### Lista Usuarios
+GET http://127.0.0.1:3000/api/usuario
+
+### Guardar usuario
+POST http://127.0.0.1:3000/api/usuario
