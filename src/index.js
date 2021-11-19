@@ -12,6 +12,12 @@ const HOST = "127.0.0.1"
 const app = express()
 app.set("puerto", PORT)
 
+// Habilitar peticiones en formato json
+app.use(express.json())
+app.use(express.urlencoded({
+    extended: true
+}))
+
 // habilitando rutas
 app.use("/api", router);
 
