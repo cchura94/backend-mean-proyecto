@@ -1,6 +1,7 @@
 import { Usuario } from "./../models/usuario"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
+import { JWT_SECRET } from "./../config/config"
 
 export const login = async function(req, res){
     let datos = req.body
@@ -25,7 +26,7 @@ export const login = async function(req, res){
                 id: user._id,
                 time: new Date()
             }
-            let token = jwt.sign(payload, "MI_CODIGO_SECRETO", {
+            let token = jwt.sign(payload, JWT_SECRET, {
                 expiresIn: "1h"
             })
             

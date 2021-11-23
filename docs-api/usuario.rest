@@ -1,5 +1,6 @@
 ### Lista Usuarios
 GET http://127.0.0.1:3000/api/usuario
+Authorization: Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9zY2FyQGdtYWlsLmNvbSIsImlkIjoiNjE5NmZiMDY5M2U3ZTA4N2ZhNDExMGI2IiwidGltZSI6IjIwMjEtMTEtMjNUMDE6NDA6MTguNjcxWiIsImlhdCI6MTYzNzYzMTYxOCwiZXhwIjoxNjM3NjM1MjE4fQ.WuWh1BUWWbTEufaqV20-OHPjrgEqGCa71i9AstA80Ig
 
 ### Guardar usuario
 POST http://127.0.0.1:3000/api/usuario
