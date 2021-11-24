@@ -1,0 +1,36 @@
+GET http://127.0.0.1:3000/api/producto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9zY2FyQGdtYWlsLmNvbSIsImlkIjoiNjE5NmZiMDY5M2U3ZTA4N2ZhNDExMGI2IiwidGltZSI6IjIwMjEtMTEtMjRUMDE6MzE6MzIuNjAwWiIsImlhdCI6MTYzNzcxNzQ5MiwiZXhwIjoxNjM3NzIxMDkyfQ.NGHB4pMUN9rZDLkpAU8KlPiceHozGFBcCvBrt0u3iS4
+
+### Guardar Producto
+
+POST http://127.0.0.1:3000/api/producto
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9zY2FyQGdtYWlsLmNvbSIsImlkIjoiNjE5NmZiMDY5M2U3ZTA4N2ZhNDExMGI2IiwidGltZSI6IjIwMjEtMTEtMjRUMDE6MzE6MzIuNjAwWiIsImlhdCI6MTYzNzcxNzQ5MiwiZXhwIjoxNjM3NzIxMDkyfQ.NGHB4pMUN9rZDLkpAU8KlPiceHozGFBcCvBrt0u3iS4
+
+{
+    "nombre": "Mesa",
+    "precio": 350,
+    "stock": 12,
+    "descripcion": "mesa de madera"
+}
+
+### Mostrar por id 
+GET http://127.0.0.1:3000/api/producto/619d96933bca18b2bb5436c1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9zY2FyQGdtYWlsLmNvbSIsImlkIjoiNjE5NmZiMDY5M2U3ZTA4N2ZhNDExMGI2IiwidGltZSI6IjIwMjEtMTEtMjRUMDE6MzE6MzIuNjAwWiIsImlhdCI6MTYzNzcxNzQ5MiwiZXhwIjoxNjM3NzIxMDkyfQ.NGHB4pMUN9rZDLkpAU8KlPiceHozGFBcCvBrt0u3iS4
+
+
+### Modificar por id
+PUT http://127.0.0.1:3000/api/producto/619d96933bca18b2bb5436c1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9zY2FyQGdtYWlsLmNvbSIsImlkIjoiNjE5NmZiMDY5M2U3ZTA4N2ZhNDExMGI2IiwidGltZSI6IjIwMjEtMTEtMjRUMDE6MzE6MzIuNjAwWiIsImlhdCI6MTYzNzcxNzQ5MiwiZXhwIjoxNjM3NzIxMDkyfQ.NGHB4pMUN9rZDLkpAU8KlPiceHozGFBcCvBrt0u3iS4
+
+{
+    "nombre": "Mesa para Oficinas",
+    "precio": 360,
+    "stock": 10,
+    "descripcion": "mesa de madera para oficinas"    
+}
+
+### eliminar por id
+DELETE http://127.0.0.1:3000/api/producto/619d9a239b7cf2883ab57a98
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9zY2FyQGdtYWlsLmNvbSIsImlkIjoiNjE5NmZiMDY5M2U3ZTA4N2ZhNDExMGI2IiwidGltZSI6IjIwMjEtMTEtMjRUMDE6MzE6MzIuNjAwWiIsImlhdCI6MTYzNzcxNzQ5MiwiZXhwIjoxNjM3NzIxMDkyfQ.NGHB4pMUN9rZDLkpAU8KlPiceHozGFBcCvBrt0u3iS4
