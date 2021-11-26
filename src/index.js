@@ -1,6 +1,7 @@
 // modulos del core de Nodejs
 // modulos de terceros (npm)
 import express from "express";
+import cors from "cors"
 // modulos locales
 import db from "./config/db"
 import { router } from "./routes"
@@ -11,6 +12,9 @@ const HOST = "127.0.0.1"
 // express
 const app = express()
 app.set("puerto", PORT)
+
+// Habilitando cors
+app.use(cors())
 
 // Habilitar peticiones en formato json
 app.use(express.json())
