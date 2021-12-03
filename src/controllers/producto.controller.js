@@ -15,8 +15,12 @@ export const listar = async function(req, res){
 
 export const guardar = async function(req, res){
     // subir la imagen
+    if(req.file){
+        req.body.imagen = req.file.filename
+    }
     // guardar los datos
     try{
+        console.log(req.body)
         let prod = new Producto(req.body);
         await prod.save();
 

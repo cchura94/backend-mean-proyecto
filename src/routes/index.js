@@ -4,6 +4,20 @@ import * as usuarioController from "./../controllers/usuario.controller";
 import * as authController from "./../controllers/auth.controller"
 import * as productoController from "./../controllers/producto.controller"
 import { verificaAuth } from "../middlewares/auth.middleware";
+// para imagenes
+import multer from 'multer'
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/imagenes')
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, uniqueSuffix + '-' + file.originalname)
+  }
+})
+
+const upload = multer({ storage: storage })
 
 export const router = Router()
 
@@ -21,7 +35,7 @@ router.post("/auth/login", authController.login);
 
 // Producto
 router.get("/producto", verificaAuth, productoController.listar);
-router.post("/producto", verificaAuth, productoController.guardar);
+router.post("/producto", verificaAuth, upload.single('imagen'), productoController.guardar);
 router.get("/producto/:id", verificaAuth, productoController.mostrar);
 router.put("/producto/:id", verificaAuth, productoController.modificar);
 router.delete("/producto/:id", verificaAuth, productoController.eliminar);
