@@ -1,0 +1,14 @@
+GET http://127.0.0.1:3000/api/cliente
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNjaHVyYS5jcGNAZ21haWwuY29tIiwiaWQiOiI2MTk2ZmE4ZmI3MzBjOWJiNTVhMmEzNWUiLCJ0aW1lIjoiMjAyMS0xMi0wNFQwMjowMTozMi40MTlaIiwiaWF0IjoxNjM4NTgzMjkyLCJleHAiOjE2Mzg1ODY4OTJ9.eS4sgqjC2U_df4yXdU2mRvTn3E2FQdUv6zlF2qENUyI
+
+### Guardar
+POST http://127.0.0.1:3000/api/cliente
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNjaHVyYS5jcGNAZ21haWwuY29tIiwiaWQiOiI2MTk2ZmE4ZmI3MzBjOWJiNTVhMmEzNWUiLCJ0aW1lIjoiMjAyMS0xMi0wNFQwMjowMTozMi40MTlaIiwiaWF0IjoxNjM4NTgzMjkyLCJleHAiOjE2Mzg1ODY4OTJ9.eS4sgqjC2U_df4yXdU2mRvTn3E2FQdUv6zlF2qENUyI
+
+{
+    "nombre_completo": "Caseres",
+    "ci_nit":"61231231",
+    "correo": "caceres@mail.com",
+    "telefono": "324342"
+}

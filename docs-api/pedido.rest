@@ -1,0 +1,24 @@
+### Lista
+GET http://127.0.0.1:3000/api/pedido
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNjaHVyYS5jcGNAZ21haWwuY29tIiwiaWQiOiI2MTk2ZmE4ZmI3MzBjOWJiNTVhMmEzNWUiLCJ0aW1lIjoiMjAyMS0xMi0wNFQwMjowMTozMi40MTlaIiwiaWF0IjoxNjM4NTgzMjkyLCJleHAiOjE2Mzg1ODY4OTJ9.eS4sgqjC2U_df4yXdU2mRvTn3E2FQdUv6zlF2qENUyI
+
+
+### Guardar Pedido
+POST http://127.0.0.1:3000/api/pedido
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNjaHVyYS5jcGNAZ21haWwuY29tIiwiaWQiOiI2MTk2ZmE4ZmI3MzBjOWJiNTVhMmEzNWUiLCJ0aW1lIjoiMjAyMS0xMi0wNFQwMjowMTozMi40MTlaIiwiaWF0IjoxNjM4NTgzMjkyLCJleHAiOjE2Mzg1ODY4OTJ9.eS4sgqjC2U_df4yXdU2mRvTn3E2FQdUv6zlF2qENUyI
+
+{
+    "monto_total": 100,
+    "cliente": "61aacdb4b911e7be0966486a",
+    "carrito": [
+        {
+            "producto": "619d96933bca18b2bb5436c1",
+            "cantidad": 1
+        },
+        {
+            "producto": "61a7a90e6db3a87a5b6c9efc",
+            "cantidad": 2
+        }        
+    ]
+}

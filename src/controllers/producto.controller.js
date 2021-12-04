@@ -53,6 +53,11 @@ export const mostrar = async function(req, res){
 }
 
 export const modificar = async function(req, res){
+
+     // subir la imagen
+    if(req.file){
+        req.body.imagen = req.file.filename
+    }
     try{
         let id = req.params.id;
         const prod = await Producto.findById(id);

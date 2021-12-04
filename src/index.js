@@ -16,6 +16,9 @@ app.set("puerto", PORT)
 // Habilitando cors
 app.use(cors())
 
+// carga de archivos estaticos
+app.use(express.static('public'))
+
 // Habilitar peticiones en formato json
 app.use(express.json())
 app.use(express.urlencoded({

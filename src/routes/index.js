@@ -3,6 +3,9 @@ import { Router } from "express"
 import * as usuarioController from "./../controllers/usuario.controller";
 import * as authController from "./../controllers/auth.controller"
 import * as productoController from "./../controllers/producto.controller"
+import * as pedidoController from "./../controllers/pedido.controller"
+import * as clienteController from "./../controllers/cliente.controller"
+
 import { verificaAuth } from "../middlewares/auth.middleware";
 // para imagenes
 import multer from 'multer'
@@ -37,5 +40,13 @@ router.post("/auth/login", authController.login);
 router.get("/producto", verificaAuth, productoController.listar);
 router.post("/producto", verificaAuth, upload.single('imagen'), productoController.guardar);
 router.get("/producto/:id", verificaAuth, productoController.mostrar);
-router.put("/producto/:id", verificaAuth, productoController.modificar);
+router.put("/producto/:id", verificaAuth, upload.single('imagen'), productoController.modificar);
 router.delete("/producto/:id", verificaAuth, productoController.eliminar);
+
+// Pedidos
+router.get("/pedido", verificaAuth, pedidoController.listar);
+router.post("/pedido", verificaAuth, pedidoController.guardar);
+
+// rutas clientes
+router.get("/cliente", verificaAuth, clienteController.listar);
+router.post("/cliente", verificaAuth, clienteController.guardar);
